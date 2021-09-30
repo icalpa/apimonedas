@@ -11,6 +11,8 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 require("./rutas/moneda.rutas")(app);
+require("./rutas/pais.rutas")(app);
+require("./rutas/usuario.rutas")(app);
 
 app.listen(puerto, () => {
     console.log(`Servicio de BD Monedas escuchando en http://localhost:${puerto}`);

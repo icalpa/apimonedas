@@ -15,6 +15,7 @@ exports.obtener = (req, res) => {
         }
         else {
             //Se devuelve el registro obtenido
+            res.header('Access-Control-Allow-Origin', '*');
             res.send(data);
         }
     });
@@ -29,6 +30,7 @@ exports.listar = (req, res) => {
         }
         else {
             //Se devuelve los registros obtenidos
+            res.header('Access-Control-Allow-Origin', '*');
             res.send(data);
         }
     });
@@ -54,6 +56,7 @@ exports.actualizar = (req, res) => {
             }
             else {
                 //Se devuelve el registro actualizado
+                res.header('Access-Control-Allow-Origin', '*');
                 res.send(data);
             }
         });
@@ -74,6 +77,7 @@ exports.eliminar = (req, res) => {
             }
             else {
                 //Se devuelve el registro actualizado
+                res.header('Access-Control-Allow-Origin', '*');
                 res.send({ message: `La moneda con id:${req.params.id} fue eliminada` });
             }
         });
